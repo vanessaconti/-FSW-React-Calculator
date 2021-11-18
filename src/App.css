@@ -1,38 +1,47 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calculator {
+  display: grid;
+  grid-template-rows: 6rem 3rem 3rem 3rem 3rem 3rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 40vw;
+  margin-left: 3vw;
 }
+.display {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  text-align: end;
+  grid-row: 1;
+  border: black solid 1px;
+  border-radius: 2px;
+  padding-right: 1rem;
+  font-size: 40px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  height: 55.8%;
+  background-color: rgb(243, 18, 168);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
-
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.math {
+  font-size: 20px;
+  background-color: rgba(79, 31, 190, 0.103);
+}
+.grey {
+  font-size: 20px;
+  background-color: rgba(32, 4, 196, 0.427);
+}
+.number {
+  font-size: 20px;
+  background-color: rgb(9, 136, 168);
+}
+.equal {
+  font-size: 20px;
+  grid-column-start: 3;
+  grid-column-end: 5;
 }
